@@ -1,0 +1,25 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shellvm="clr-namespace:UxWpfWorkshop.ViewModels.Shell"
+    xmlns:shellv="clr-namespace:UxWpfWorkshop.Views.Shell"
+    xmlns:homevm="clr-namespace:UxWpfWorkshop.ViewModels.Home"
+    xmlns:homev="clr-namespace:UxWpfWorkshop.Views.Home">
+
+    <DataTemplate DataType="{x:Type shellvm:HeaderViewModel}">
+        <shellv:HeaderView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type shellvm:NavigationViewModel}">
+        <shellv:NavigationView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type shellvm:MainViewModel}">
+        <shellv:MainView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type homevm:HomeViewModel}">
+        <homev:HomeView/>
+    </DataTemplate>
+
+</ResourceDictionary>
