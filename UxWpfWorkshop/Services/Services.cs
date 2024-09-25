@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using UxWpfWorkshop.Services.Impl;
 
 namespace UxWpfWorkshop.Services
 {
@@ -7,6 +8,7 @@ namespace UxWpfWorkshop.Services
         public static IServiceCollection ConfigureServices(this IServiceCollection services)
         {
             // add your services here
+            services.AddSingleton<IDataService, DataService>();
 
             return services;
         }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using UxWpfWorkshop.ViewModels.DataLoad;
 using UxWpfWorkshop.ViewModels.Home;
 using UxWpfWorkshop.ViewModels.Shell;
 
@@ -14,7 +15,8 @@ namespace UxWpfWorkshop.ViewModels
             services.AddSingleton<MainViewModel>();
 
             // add your view models here
-            services.AddSingleton<HomeViewModel>();
+            services.AddTransient<HomeViewModel>();
+            services.AddTransient<DataLoadViewModel>();
 
             return services;
         } 

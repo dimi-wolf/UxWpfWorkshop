@@ -4,7 +4,9 @@
     xmlns:shellvm="clr-namespace:UxWpfWorkshop.ViewModels.Shell"
     xmlns:shellv="clr-namespace:UxWpfWorkshop.Views.Shell"
     xmlns:homevm="clr-namespace:UxWpfWorkshop.ViewModels.Home"
-    xmlns:homev="clr-namespace:UxWpfWorkshop.Views.Home">
+    xmlns:homev="clr-namespace:UxWpfWorkshop.Views.Home"
+    xmlns:dlvm="clr-namespace:UxWpfWorkshop.ViewModels.DataLoad"
+    xmlns:dlv="clr-namespace:UxWpfWorkshop.Views.DataLoad">
 
     <DataTemplate DataType="{x:Type shellvm:HeaderViewModel}">
         <shellv:HeaderView/>
@@ -20,6 +22,10 @@
 
     <DataTemplate DataType="{x:Type homevm:HomeViewModel}">
         <homev:HomeView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type dlvm:DataLoadViewModel}">
+        <dlv:DataLoadView/>
     </DataTemplate>
 
 </ResourceDictionary>

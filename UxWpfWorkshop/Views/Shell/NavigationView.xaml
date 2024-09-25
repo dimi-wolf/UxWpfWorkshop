@@ -21,6 +21,11 @@
                 <Button
                     Content="Home"
                     Command="{Binding NavigateHomeCommand}"/>
+
+                <Button
+                    Content="Data Loading"
+                    Command="{Binding NavigateDataLoadCommand}"
+                    Margin="0,10,0,0"/>
             </StackPanel>
         </Border>
     </Grid>

@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using UxWpfWorkshop.Messages;
+using UxWpfWorkshop.ViewModels.DataLoad;
 using UxWpfWorkshop.ViewModels.Home;
 
 namespace UxWpfWorkshop.ViewModels.Shell
@@ -17,6 +18,12 @@ namespace UxWpfWorkshop.ViewModels.Shell
         private void NavigateHome()
         {
             Messenger.Send(new NavigationMessage(typeof(HomeViewModel)));
+        }
+
+        [RelayCommand]
+        private void NavigateDataLoad()
+        {
+            Messenger.Send(new NavigationMessage(typeof(DataLoadViewModel)));
         }
     }
 }

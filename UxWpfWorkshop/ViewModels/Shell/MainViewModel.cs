@@ -15,7 +15,9 @@ namespace UxWpfWorkshop.ViewModels.Shell
         public MainViewModel(
             HeaderViewModel headerViewModel,
             NavigationViewModel navigationViewModel,
-            IServiceProvider serviceProvider)
+            IServiceProvider serviceProvider,
+            IMessenger messenger)
+            : base(messenger)
         {
             _headerViewModel = headerViewModel;
             _navigationViewModel = navigationViewModel;
@@ -43,6 +45,11 @@ namespace UxWpfWorkshop.ViewModels.Shell
 
         private void NavigationMessageReceived(object sender, NavigationMessage message)
         {
+            if (MainContent != null && MainContent.GetType() == message.ContentType)
+            {
+                return;
+            }
+
             object? content = _serviceProvider.GetService(message.ContentType);
             MainContent = content;
         }
